@@ -26,8 +26,6 @@ RF05 - Registrar retiros espirituales u holísticos [nombre; contacto del organi
 
 RF06 - Modificar los datos de los retiros registrados.
 
-
-
 RF07 - Consultar los retiros registrados.
 
 
