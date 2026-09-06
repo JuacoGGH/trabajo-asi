@@ -1,91 +1,78 @@
-Link donde hicimos el diagrama de clases:
-https://lucid.app/lucidchart/4d5dbb53-d394-4344-9330-4d5f982a21f5/edit?viewport_loc=87%2C-613%2C3443%2C1743%2C0_0&invitationId=inv_5ec9a083-1e7c-435d-bf9c-0f6d91cec34f
-(en línea con los requerimientos actuales)
-
-Link al Plantuml (Actualizado): https://www.plantuml.com/plantuml/duml/dLJDKjim4BxxAJoSMZ9Xw1kGXgHm03847c0jRynIMPkHvBIbqtVloXjhxC29NAJzllN-VBlALOZWOzVQ8lmajmSFRMaiXB28qLFLHRmrxBRqXkNbgSkQNTp6FnRBYcqzOiCBrFoBN5Fkm0OiYjwzV0uTUEBoRr6MytjkAu_fjjYZjLHpkgzQ89ikJsXnnow1i-zTCE0VCPBdBryJiYOR_G05nPRiTjHq0jzpf1qPCCHEk7z3_aM3hWPDlqRp0iysKWjRSiQpexV-WsAsQ3msetopHx4fJ1FceZBmhgRPGnNHuGV8nlDlQZcyPsua3ti2cx0xhgMFQHRfCdGsJh2LfPPSXiOjAoGj3thFhp4OJ_k-rVb3zIeE1mw52dBhI8YZiIOdxYAe-gv2X5gufMI3LTYZLvDT11FvmJSW6WhcY_ccgomPbboH7CGqTG4zQd3sBOGDD0bZIv4CBC4PjCTCztH0k_5q4Bk6-WWi8ZhbbzoYwuE6bCh53fJOeZ-GwU7dwhW0PTgDns60kYfPM3MpffDbCI9CId-ohgfDkjomJpMePYD0T1DBYxvr4Lr8OJvPne-EuAI2BFadGuwVXuP-eZrFMhj35-2rJwPZ7p-m75ndfh7bbvzvDGc-0GhzwVb0pX3qBL2dcioloQD9tc8Cho1ZCkcznGZZyeSXI_I9BFbZyRSMzPFXB-Visravd_U7_WiKUlJ8UM8kBoxEpuxlfT3ZbCmhyJ7VpsfCPMOYUVPGIgjIqJwczPRxBgwayAwr_m40
-Link al Plantuml (Seleccionar y pegar en el buscador):https://www.plantuml.com/plantuml/duml/dLJDKjim4BxxAJoSMZ9Xw1kGXgHm03847c0jRynIMPkHvBIbqtVloXjhxC29NAJzllN-VBlALOZWOzVQ8lmajmSFRMaiXB28qLFLHRmrxBRqXkNbgSkQNTp6FnRBYcqzOiCBrFoBN5Fkm0OiYjwzV0uTUEBoRr6MytjkAu_fjjYZjLHpkgzQ89ikJsXnnow1i-zTCE0VCPBdBryJiYOR_G05nPRiTjHq0jzpf1qPCCHEk7z3_aM3hWPDlqRp0iysKWjRSiQpexV-WsAsQ3msetopHx4fJ1FceZBmhgRPGnNHuGV8nlDlQZcyPsua3ti2cx0xhgMFQHRfCdGsJh2LfPPSXiOjAoGj3thFhp4OJ_k-rVb3zIeE1mw52dBhI8YZiIOdxYAe-gv2X5gufMI3LTYZLvDT11FvmJSW6WhcY_ccgomPbboH7CGqTG4zQd3sBOGDD0bZIv4CBC4PjCTCztH0k_5q4Bk6-WWi8ZhbbzoYwuE6bCh53fJOeZ-GwU7dwhW0PTgDns60kYfPM3MpffDbCI9CId-ohgfDkjomJpMePYD0T1DBYxvr4Lr8OJvPne-EuAI2BFadGuwVXuP-eZrFMhj35-2rJwPZ7p-m75ndfh7bbvzvDGc-0GhzwVb0pX3qBL2dcioloQD9tc8Cho1ZCkcznGZZyeSXI_I9BFbZyRSMzPFXB-Visravd_U7_WiKUlJ8UM8kBoxEpuxlfT3ZbCmhyJ7VpsfCPMOYUVPGIgjIqJwczPRxBgwayAwr_m40
-
-
-* PlantUML corrección sin clase Agenda
-@startuml Retirosteam MODP
+link del diagrama de clase actualizado: https://docs.google.com/document/d/133DIWd8UuBYKhyvM017NdUK6-1fbn0vA1ZkndMHtY0U/edit?usp=sharing
+@startuml Retirosteam_MODP
 left to right direction
+
 class Usuario {
-  -nombre
-  -apellido
-  -email
-  -telefono
-  -notificacion:Notificacion
-  +crear()
-  +modificar()
-  +mostrarPerfil()
-  +obtenerNombre()
-  +obtenerApellido()
-  +obtenerEmail()
-  +obtenerTelefono()
-  +obtenerNotificacion()
-  +tomarNombre()
-  +tomarApellido()
-  +tomarEmail()
-  +tomarTelefono()
-  +tomarNotificacion()
+  - nombre : String
+  - apellido : String
+  - email : String
+  - telefono : String
+  --
+  + mostrarPerfil() : void
+  + obtenerHistorial() : List<Retiro>
+  + calcularGastoTotal() : Decimal
+  + registrar() : void
 }
+
 class Retiro {
-  -nombre
-  -descripcion
-  -objetivosPersonales
-  -fechaInicio
-  -duracion
-  -estado
-  -climaEsperado
-  -contactoOrganizador
-  -generoDelPublico
-  -cantidadDelPublico
-  -precio
-  -nivelPrivacidad
-  -nivelAtencion  
-  -comentarioAdicional
-  -puntuacion
-  -cronogramaActividades
-  -servicios
-  -politicasCancelacion
-  -ubicacion: Ubicacion 
-  -fotografias
-  +crear()
-  +consultar()
-  +registrar()
-  +modificar()
-  +buscar(f: filtro)
-  +obtenerCronograma()
-  +agendar()
-  +obtenerRetirosAgendados()
-  +obtenerProximoRetiro()
+  - nombre : String
+  - contactoOrganizador : String
+  - fechaInicio : Date
+  - duracion : Integer
+  - disponibilidad : String
+  - estado : String
+  - objetivosPersonales : String
+  - generoDelPublico : String
+  - cantidadDelPublico : String
+  - climaEsperado : String
+  - precio : Decimal
+  - nivelPrivacidad : String
+  - nivelAtencion : String
+  - comentarioAdicional : String
+  - puntuacion : Decimal
+  - cronogramaActividades : String
+  - serviciosIncluidos : String
+  - serviciosNoIncluidos : String
+  - politicaCancelacion : String
+  - descripcion : String
+  - aceptaMascotas : Boolean
+  - fotografias : List<String>
+  --
+  + registrar() : void
+  + modificar() : void
+  + consultar() : Retiro
+  + buscar() : List<Retiro>
+  + filtrarPorAtributos() : List<Retiro>
+  + ordenarPorRecientes() : List<Retiro>
+  + ordenarAleatoriamente() : List<Retiro>
+  + agendar() : void
+  + obtenerRetirosAgendados() : List<Retiro>
+  + obtenerCronograma() : String
 }
+
 class Notificacion {
-  -hora
-  -titulo
-  -descripción
-  -evento
-  +crear()
-  +modificar()
-  +mostrar()
-  +notificar()
-  +desactivar()
-  +activar()
+  - hora : Date
+  - titulo : String
+  - descripcion : String
+  - evento : String
+  --
+  + mostrar() : void
+  + notificar() : void
 }
+
 class Ubicacion {
-  -pais
-  -provincia
-  -ciudad
-  -direccion
-  +crear()
-  +obtenerDireccionCompleta()
+  - pais : String
+  - provincia : String
+  - ciudad : String
+  - direccion : String
+  --
+  + obtenerDireccionCompleta() : String
 }
-Usuario "1" --> "0..*" Retiro : administra y agenda
+
+Usuario "1" --> "0..*" Retiro : conoce - consulta - registra - agenda
 Usuario "1" --> "0..*" Notificacion : recibe
 Retiro "1" --> "0..*" Notificacion : genera
 Retiro "0..*" --> "1" Ubicacion : se realiza en
-note top of Usuario : Los métodos de navegación \n de esta clase se extienden \n a todo el diagrama
-@enduml
 
 
 * PlantUML corrección con clase Agenda
