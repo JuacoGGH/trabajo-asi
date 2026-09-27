@@ -19,28 +19,30 @@ class Usuario {
   +tomarApellido()
   +tomarEmail()
   +tomarTelefono()
-  
 }
 class Retiro {
   -nombre
   -descripcion
   -objetivosPersonales
+  -actividad : Actividad
   -fechaInicio
   -fechaFin
   -estado
   -climaEsperado
   -contactoOrganizador
+  -generoDelPublico
+  -cantidadDelPublico
   -precio
   -nivelPrivacidad
   -nivelAtencion  
   -comentarioAdicional
   -puntuacion
-  -cronogramaActividades
   -servicios
   -politicasCancelacion
+  -ubicacion: Ubicacion 
   -fotografias
   -mascotasPermitidas
-  -ubicacion: Ubicacion 
+  -calendario
   +crear()
   +consultar()
   +registrar()
@@ -48,21 +50,30 @@ class Retiro {
   +buscar(f: filtro)
   +obtenerCronograma()
   +agendar()
+  +enviarNotificacion()
   +obtenerRetirosAgendados()
   +obtenerProximoRetiro()
-  +obtenerNotificacion()
 }
-
 class Ubicacion {
   -pais
   -provincia
   -ciudad
   -direccion
   +crear()
-  +obtenerDireccionCompleta()
+  +mostrar()
+}
+class Actividad {
+  -nombre
+  -descripcion
+  -inicio
+  -fin
+  +mostrar()
+  +crear()
+
 }
 Usuario "1" --> "0..*" Retiro : administra y agenda
 Retiro "0..*" --> "1" Ubicacion : se realiza en
+Retiro "1" --* "1..0*" Actividad : contiene
 note top of Usuario : Los métodos de navegación \n de esta clase se extienden \n a todo el diagrama
 
 @enduml
