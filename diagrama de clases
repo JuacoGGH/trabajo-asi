@@ -1,118 +1,26 @@
 link del diagrama de clase actualizado: https://docs.google.com/document/d/133DIWd8UuBYKhyvM017NdUK6-1fbn0vA1ZkndMHtY0U/edit?usp=sharing
-@startuml Retirosteam_MODP
+@startuml MODP Retirosteam TPI ASI
 left to right direction
 
-class Usuario {
-  - nombre : String
-  - apellido : String
-  - email : String
-  - telefono : String
-  --
-  + mostrarPerfil() : void
-  + obtenerHistorial() : List<Retiro>
-  + calcularGastoTotal() : Decimal
-  + registrar() : void
-}
-
-class Retiro {
-  - nombre : String
-  - contactoOrganizador : String
-  - fechaInicio : Date
-  - duracion : Integer
-  - disponibilidad : String
-  - estado : String
-  - objetivosPersonales : String
-  - generoDelPublico : String
-  - cantidadDelPublico : String
-  - climaEsperado : String
-  - precio : Decimal
-  - nivelPrivacidad : String
-  - nivelAtencion : String
-  - comentarioAdicional : String
-  - puntuacion : Decimal
-  - cronogramaActividades : String
-  - serviciosIncluidos : String
-  - serviciosNoIncluidos : String
-  - politicaCancelacion : String
-  - descripcion : String
-  - aceptaMascotas : Boolean
-  - fotografias : List<String>
-  --
-  + registrar() : void
-  + modificar() : void
-  + consultar() : Retiro
-  + buscar() : List<Retiro>
-  + filtrarPorAtributos() : List<Retiro>
-  + ordenarPorRecientes() : List<Retiro>
-  + ordenarAleatoriamente() : List<Retiro>
-  + agendar() : void
-  + obtenerRetirosAgendados() : List<Retiro>
-  + obtenerCronograma() : String
-}
-
-class Notificacion {
-  - hora : Date
-  - titulo : String
-  - descripcion : String
-  - evento : String
-  --
-  + mostrar() : void
-  + notificar() : void
-}
-
-class Ubicacion {
-  - pais : String
-  - provincia : String
-  - ciudad : String
-  - direccion : String
-  --
-  + obtenerDireccionCompleta() : String
-}
-
-Usuario "1" --> "0..*" Retiro : conoce - consulta - registra - agenda
-Usuario "1" --> "0..*" Notificacion : recibe
-Retiro "1" --> "0..*" Notificacion : genera
-Retiro "0..*" --> "1" Ubicacion : se realiza en
-
-
-* PlantUML corrección con clase Agenda
-@startuml Retirosteam MODP
-left to right direction
-class Agenda {
-  -calendario
-  -retirosAgendados
-  -retiro:Retiro
-  +crear()
-  +mostrar()
-  +agendarRetiro()
-  +obtenerRetirosAgendados()
-  +obtenerProximoRetiro()
-  +modificarRetiroAgendado()
-  +eliminarRetiroAgendado()
-  +buscarRetiro(f: filtro)
-}
 class Usuario {
   -nombre
   -apellido
   -email
   -telefono
-  -agenda:Agenda
   -notificacion:Notificacion
   +crear()
   +modificar()
   +mostrarPerfil()
-  +buscarRetirosRegistrados(f: filtro)
+  +calcularGastoTotal()
   +obtenerNombre()
   +obtenerApellido()
   +obtenerEmail()
   +obtenerTelefono()
-  +obtenerAgenda()
   +obtenerNotificacion()
   +tomarNombre()
   +tomarApellido()
   +tomarEmail()
   +tomarTelefono()
-  +tomarAgenda()
   +tomarNotificacion()
 }
 class Retiro {
@@ -120,7 +28,7 @@ class Retiro {
   -descripcion
   -objetivosPersonales
   -fechaInicio
-  -duracion
+  -fechaFin
   -estado
   -climaEsperado
   -contactoOrganizador
@@ -136,20 +44,17 @@ class Retiro {
   -politicasCancelacion
   -ubicacion: Ubicacion 
   -fotografias
+  -mascotasPermitidas
+  -calendario
   +crear()
+  +consultar()
   +registrar()
   +modificar()
-  +consultar()
+  +buscar(f: filtro)
   +obtenerCronograma()
-  +obtenerRetirosRegistrados()
-}
-class Ubicacion {
-  -pais
-  -provincia
-  -ciudad
-  -direccion
-  +crear()
-  +obtenerDireccionCompleta()
+  +agendar()
+  +obtenerRetirosAgendados()
+  +obtenerProximoRetiro()
 }
 class Notificacion {
   -hora
@@ -163,11 +68,18 @@ class Notificacion {
   +desactivar()
   +activar()
 }
-Usuario --> "0..*" Notificacion : recibe
+class Ubicacion {
+  -pais
+  -provincia
+  -ciudad
+  -direccion
+  +crear()
+  +obtenerDireccionCompleta()
+}
+Usuario "1" --> "0..*" Retiro : administra y agenda
+Usuario "1" --> "0..*" Notificacion : recibe
 Retiro "1" --> "0..*" Notificacion : genera
-Retiro --> "1" Ubicacion : se ubica en
-Usuario *-- "1" Agenda
-Agenda --> "0..*" Retiro : contiene
-Usuario --> "0..*" Retiro : administra
+Retiro "0..*" --> "1" Ubicacion : se realiza en
 note top of Usuario : Los métodos de navegación \n de esta clase se extienden \n a todo el diagrama
+
 @enduml
