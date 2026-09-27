@@ -32,8 +32,6 @@ class Retiro {
   -estado
   -climaEsperado
   -contactoOrganizador
-  -generoDelPublico
-  -cantidadDelPublico
   -precio
   -nivelPrivacidad
   -nivelAtencion  
