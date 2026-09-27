@@ -53,7 +53,5 @@ Notificaciones
 
 RF13 - Enviar recordatorios sobre el inicio de los retiros agendados.
 
-RF14 - Enviar recordatorios de actividades programadas del retiro agendado.
-
 
 
