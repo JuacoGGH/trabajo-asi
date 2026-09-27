@@ -63,8 +63,6 @@ class Ubicacion {
   +obtenerDireccionCompleta()
 }
 Usuario "1" --> "0..*" Retiro : administra y agenda
-Usuario "1" --> "0..*" Notificacion : recibe
-Retiro "1" --> "0..*" Notificacion : genera
 Retiro "0..*" --> "1" Ubicacion : se realiza en
 note top of Usuario : Los métodos de navegación \n de esta clase se extienden \n a todo el diagrama
 
