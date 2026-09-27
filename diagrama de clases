@@ -43,7 +43,6 @@ class Retiro {
   -ubicacion: Ubicacion 
   -fotografias
   -mascotasPermitidas
-  -calendario
   +crear()
   +consultar()
   +registrar()
@@ -54,18 +53,7 @@ class Retiro {
   +obtenerRetirosAgendados()
   +obtenerProximoRetiro()
 }
-class Notificacion {
-  -hora
-  -titulo
-  -descripción
-  -evento
-  +crear()
-  +modificar()
-  +mostrar()
-  +notificar()
-  +desactivar()
-  +activar()
-}
+
 class Ubicacion {
   -pais
   -provincia
