@@ -7,7 +7,6 @@ class Usuario {
   -apellido
   -email
   -telefono
-  -notificacion:Notificacion
   +crear()
   +modificar()
   +mostrarPerfil()
@@ -16,12 +15,11 @@ class Usuario {
   +obtenerApellido()
   +obtenerEmail()
   +obtenerTelefono()
-  +obtenerNotificacion()
   +tomarNombre()
   +tomarApellido()
   +tomarEmail()
   +tomarTelefono()
-  +tomarNotificacion()
+  
 }
 class Retiro {
   -nombre
@@ -52,6 +50,7 @@ class Retiro {
   +agendar()
   +obtenerRetirosAgendados()
   +obtenerProximoRetiro()
+  +obtenerNotificacion()
 }
 
 class Ubicacion {
