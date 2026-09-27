@@ -40,9 +40,9 @@ class Retiro {
   -cronogramaActividades
   -servicios
   -politicasCancelacion
-  -ubicacion: Ubicacion 
   -fotografias
   -mascotasPermitidas
+  -ubicacion: Ubicacion 
   +crear()
   +consultar()
   +registrar()
