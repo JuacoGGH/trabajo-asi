@@ -9,49 +9,35 @@ Requerimientos funcionales(RF)
 
 Administración de usuario
 
-
-RF01 - El sistema debe registrar los datos personales del usuario [Nombre; Apellido; Email; Telefono; Email].
-
-RF02 - Mostrar los datos personales del usuario en una pestaña "perfil".
-
-RF03 - Mostrar un historial dentro de la pestañan "perfil", de retiros que el usuario haya asistido [].
-
-RF04 - Calcular el gasto total acumulado de lo retiros realizados.
-
+Registrar los datos personales del usuario [nombre; apellido; email; telefono; email].
+Modificar los datos personales del usuario.
+Consultar los datos personales del usuario.
+Mostrar los datos personales del usuario en una pestaña "perfil".
+Mostrar un historial dentro de la pestaña "perfil", de retiros que el usuario haya asistido.
+Calcular el gasto total acumulado de los retiros realizados.
 
 Gestión de retiros
 
-
-RF05 - Registrar retiros espirituales u holísticos [nombre; contacto del organizador; fecha de inicio; duración; disponibilidad; estado: activo o no activo; ubicación geográfica; fotografías de las actividades y lugares; servicios incluidos y no incluidos; nivel de privacidad; nivel de atención; cronograma de actividades ofrecidas; intensidad de las actividades; objetivos o beneficios esperados; público destinatario: hombres, mujeres o mixto; cantidad de personas: grupal o individual; clima esperado; precio; política de cancelación; descripción; aceptación de mascotas; descripción general; comentario adicional y puntuación].
-
-RF06 - Modificar los datos de los retiros registrados.
-
-RF07 - Consultar los retiros registrados.
-
+Registrar retiros espirituales u holísticos [nombre; contacto del organizador; fecha de inicio; duración; estado: activo o no activo; ubicación geográfica; fotografías de las actividades y lugares; servicios incluidos y no incluidos; nivel de privacidad; nivel de atención; cronograma de actividades ofrecidas, horarios y duración; intensidad de las actividades; objetivos o beneficios esperados; público destinatario: hombres, mujeres o mixto; cantidad de personas: grupal o individual; clima esperado; precio; política de cancelación; descripción; aceptación de mascotas; descripción general; comentario adicional y puntuación].
+Modificar los datos de los retiros registrados.
+Eliminar los retiros registrados.
+Consultar los retiros registrados.
 
 Búsqueda y filtro
 
-
-RF08 - Buscar retiros registrados.
-
-RF09 - Filtrar la búsqueda de retiros registrados por atributos. 
-
-RF10 - De no aplicarse filtros, el sistema debe poder listar los retiros registrados aleatoriamente o por más recientes primero, según el usuario elija.
-
+Buscar retiros registrados.
+Filtrar la búsqueda de retiros registrados por atributos. 
+De no aplicarse filtros, listar los retiros registrados aleatoriamente o por más recientes primero, según el usuario elija.
 
 Agenda
 
-
-RF11 - Agendar un retiro por realizar.
-
-RF12 - Mostrar agenda tipo calendario que muestre los retiros agendados en la fecha de inicio correspondiente hasta la fecha de finalización, pudiendo mostrar retiros futuros, pasados o en curso.
-
-
+Agendar un retiro por realizar.
+Ofrecer agenda tipo calendario que muestre los retiros agendados en la fecha de inicio correspondiente hasta la fecha de finalización, pudiendo mostrar retiros futuros, pasados o en curso.
+Buscar retiros agendados.
 
 Notificaciones
 
-
-RF13 - Enviar recordatorios sobre el inicio de los retiros agendados.
+Enviar recordatorios al usuario sobre el inicio de los retiros agendados.
 
 
 
