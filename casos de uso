@@ -1,1 +1,13 @@
+CU1 - Registrar un nuevo retiro
+Objetivo:
+Permitir que un usuario registre un nuevo retiro proporcionando la información necesaria para que quede almacenado en el sistema.
+Descripción: 
+El usuario ingresa los datos correspondientes al retiro, como los datos personales, selecciona el tipo de retiro, se especifica el monto del retiro
+el sistema valida los datos, se registra el retiro.
+https://docs.google.com/document/d/1FMR0BfR8PTAoek7NXc87XRdBAOyJsIwPccI3qKMqkKg/edit?usp=sharing
+Prototipo:
+CU2 - Consultar todos los datos de un retiro
+Objetivos:
+El usuario:
+
 
