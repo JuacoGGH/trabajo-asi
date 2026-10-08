@@ -1,3 +1,42 @@
+DIAGRAMMA DE CASOS DE USO v1
+@startuml DCU
+left to right direction
+(Registrar retiro) as (1)
+(Modificar retiro) as (2)
+(Consultar retiro) as (3)
+(Eliminar retiro) as (10)
+(Generar pago) as (4)
+(Registrar actividad) as (5)
+(Consultar actividades) as (6)
+(Enviar notificacion) as (7)
+(Dar de baja retiro) as (8)
+(Dar de alta retiro) as (9)
+(Consultar pago) as (11)
+(Registrar usuario) as (12)
+(Consultar usuario) as (13)
+(Modificar usuario) as (14)
+(6).left.>(1):ext
+(6).>(2):ext
+(2).>(3):ext
+(5).up.>(6):ext
+(4).up.>(2):ext
+(14).up.>(13):ext
+:Usuario: as U
+:Sistema: as S
+U-->(1)
+U-->(3)
+U-->(6)
+U-->(8)
+U-->(9)
+U-->(10)
+U-->(11)
+U-->(12)
+U-->(13)
+
+S-->(7)
+@enduml
+
+
 CU1 - Registrar un nuevo retiro
 Objetivo:
 Permitir que un usuario registre un nuevo retiro proporcionando la información necesaria para que quede almacenado en el sistema.
